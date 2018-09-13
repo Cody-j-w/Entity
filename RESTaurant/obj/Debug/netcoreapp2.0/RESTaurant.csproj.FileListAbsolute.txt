@@ -1,0 +1,11 @@
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\bin\Debug\netcoreapp2.0\RESTaurant.deps.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\bin\Debug\netcoreapp2.0\RESTaurant.runtimeconfig.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\bin\Debug\netcoreapp2.0\RESTaurant.runtimeconfig.dev.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\bin\Debug\netcoreapp2.0\RESTaurant.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\bin\Debug\netcoreapp2.0\RESTaurant.pdb
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.csproj.CoreCompileInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.AssemblyInfoInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.AssemblyInfo.cs
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.pdb
+C:\Users\Cody James\Documents\C#\Entity_ORM\RESTaurant\obj\Debug\netcoreapp2.0\RESTaurant.csprojResolveAssemblyReference.cache

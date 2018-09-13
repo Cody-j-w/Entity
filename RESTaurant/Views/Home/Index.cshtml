@@ -1,0 +1,26 @@
+﻿@using RESTaurant.Models
+
+@model Restaur
+<form asp-action="Submit" asp-controller="Home" method="POST">
+    <p class="text-info lead">Name: </p><input type="text" class="form-control col-4" name="Name" asp-for="Name">
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead">Restaurant: </p><input type="text" class="form-control col-4" asp-for="Location">
+    <span asp-validation-for="Location" class="text-danger"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead">Review: </p><input type="text" class="form-control col-4" asp-for="Review">
+    <span asp-validation-for="Review" class="text-danger"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead">Rating:</p><select class="form-control col-2" asp-for="Rating">
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+    </select>
+    <p class="text-info lead">Date of Visit: </p><input type="date" class="form-control col-4"  asp-for="Visit">
+    <span asp-validation-for="Visit" class="text-danger"></span>
+    <hr class="bg-light my-3">
+    <input type="submit" value="Submit" class="btn btn-info">
+
+</form>

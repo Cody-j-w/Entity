@@ -1,0 +1,14 @@
+﻿
+
+@foreach(var review in @Model)
+{
+    <div class="card bg-light">
+        <h5 class="text-dark">Review for @review.Location</h5>
+        <p class="text-dark">@review.Rating Stars</p>
+        <hr class="bg-info my-3">
+        <p class="text-dark lead">"@review.Review"</p>
+        <p class="text-dark lead">- @review.Name at @review.Visit</p>
+
+    </div>
+    <hr class="bg-light my-3">
+}
