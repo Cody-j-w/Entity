@@ -1,0 +1,11 @@
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\bin\Debug\netcoreapp2.0\LoginAndReg.deps.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\bin\Debug\netcoreapp2.0\LoginAndReg.runtimeconfig.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\bin\Debug\netcoreapp2.0\LoginAndReg.runtimeconfig.dev.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\bin\Debug\netcoreapp2.0\LoginAndReg.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\bin\Debug\netcoreapp2.0\LoginAndReg.pdb
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.csprojResolveAssemblyReference.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.csproj.CoreCompileInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.AssemblyInfoInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.AssemblyInfo.cs
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\LoginAndReg\obj\Debug\netcoreapp2.0\LoginAndReg.pdb

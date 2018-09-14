@@ -1,0 +1,37 @@
+﻿@model User
+
+<form asp-action="Create" asp-controller="Home" class="col-5 d-inline-block align-top" method="POST">
+    <h1 class="text-info">Register!</h1>
+    <p class="text-info lead d-inline-block">First Name:</p><input class="form-control" type="text" asp-for="FirstName">
+    <span class="text-danger" asp-validation-for="FirstName"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Last Name:</p><input class="form-control" type="text" asp-for="LastName">
+    <span class="text-danger" asp-validation-for="LastName"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">E-mail:</p><input class="form-control" type="text" asp-for="Email">
+    <span class="text-danger" asp-validation-for="Email"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Password:</p><input class="form-control" type="password" asp-for="Password">
+    <span class="text-danger" asp-validation-for="Password"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Confirm password:</p><input class="form-control" type="password" asp-for="PassConfirm">
+    <span class="text-danger" asp-validation-for="PassConfirm"></span>
+    <hr class="bg-light my-3">
+    <input class="btn btn-info text-dark" type="submit" value="Submit"> 
+</form>
+<div class="col-1 d-inline-block"></div>
+
+<form asp-action="Login" asp-controller="Home" class="col-5 d-inline-block align-top" method="POST">
+    <h1 class="text-info">Login!</h1>
+    <p class="text-info lead d-inline-block">E-mail:</p><input class="form-control" type="text" name="EmailLogin">
+    
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Password:</p><input class="form-control" type="password" name="PassLogin">
+    @if(TempData != null)
+    {
+        <span class="text-danger">@TempData["LoginErrors"]</span>
+    }
+    
+    <hr class="bg-light my-3">
+    <input class="btn btn-info text-dark" type="submit" value="Submit"> 
+</form>
