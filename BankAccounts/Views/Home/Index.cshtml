@@ -1,0 +1,42 @@
+﻿@model User
+<div class="row">
+    @if(TempData["AccessDenied"] != null)
+    {
+        <h1 class="display-4 text-danger">@TempData["AccessDenied"]</h1>
+    }
+</div>
+<form asp-action="Create" asp-controller="Home" class="col-5 d-inline-block align-top" method="POST">
+    <h1 class="text-info">Register!</h1>
+    <p class="text-info lead d-inline-block">First Name:</p><input class="form-control" type="text" asp-for="firstName">
+    <span class="text-danger" asp-validation-for="firstName"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Last Name:</p><input class="form-control" type="text" asp-for="lastName">
+    <span class="text-danger" asp-validation-for="lastName"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">E-mail:</p><input class="form-control" type="text" asp-for="email">
+    <span class="text-danger" asp-validation-for="email"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Password:</p><input class="form-control" type="password" asp-for="password">
+    <span class="text-danger" asp-validation-for="password"></span>
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Confirm password:</p><input class="form-control" type="password" asp-for="passConfirm">
+    <span class="text-danger" asp-validation-for="passConfirm"></span>
+    <hr class="bg-light my-3">
+    <input class="btn btn-info text-dark" type="submit" value="Submit"> 
+</form>
+<div class="col-1 d-inline-block"></div>
+
+<form asp-action="Login" asp-controller="Home" class="col-5 d-inline-block align-top" method="POST">
+    <h1 class="text-info">Login!</h1>
+    <p class="text-info lead d-inline-block">E-mail:</p><input class="form-control" type="text" name="EmailLogin">
+    
+    <hr class="bg-light my-3">
+    <p class="text-info lead d-inline-block">Password:</p><input class="form-control" type="password" name="PassLogin">
+    @if(TempData["LoginErrors"] != null)
+    {
+        <span class="text-danger">@TempData["LoginErrors"]</span>
+    }
+    
+    <hr class="bg-light my-3">
+    <input class="btn btn-info text-dark" type="submit" value="Submit"> 
+</form>

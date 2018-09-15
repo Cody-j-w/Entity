@@ -1,0 +1,50 @@
+﻿
+
+<div class="row">
+    <div class="col-7">
+    <h1 class="text-info display-4">Welcome, @ViewData["user"]!</h1>
+    </div>
+    <div class="col-5 justify-content-right">
+        <h2 class="text-info"> Your current balance: $@ViewData["balance"]</h2>
+    </div>
+</div>
+
+<hr class="bg-light my-3"> 
+
+<div class="row">
+    <form asp-action="Transactions" asp-controller="Home" method="POST">
+        <p class="text-info lead d-inline-block">Deposit/Withdraw: </p> <input type="number" class="form-control col-3 d-inline-block" name="value" step="0.01">
+        <div class="d-inline-block col-2"></div>
+        <input type="submit" class="btn btn-info text-dark col-3" value="Submit">
+    </form> 
+</div>
+
+<hr class="bg-light my-4">
+
+<div class="row">
+    <table class="table text-info table-light table-bordered col-6">
+        <thead>
+            <tr>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var transaction in @Model)
+            {
+                <tr>
+                    <td>
+                        @transaction.value
+                    </td>
+                    <td>
+                        @transaction.createdAt
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

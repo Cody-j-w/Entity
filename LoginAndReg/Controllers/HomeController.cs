@@ -36,17 +36,11 @@ namespace LoginAndReg.Controllers
         [HttpPost("Create")]
         public IActionResult Create(User user)
         {
-            Console.WriteLine(user.FirstName);
-            Console.WriteLine(user.LastName);
-            Console.WriteLine(user.Email);
-            Console.WriteLine(user.Password);
+            
             
 
             if(ModelState.IsValid){
-                Console.WriteLine(user.FirstName);
-                Console.WriteLine(user.LastName);
-                Console.WriteLine(user.Email);
-                Console.WriteLine(user.Password);
+                
                 var CheckEmail = _context.User.SingleOrDefault(check => check.Email == user.Email);
                 if(CheckEmail == null)
                 {
@@ -62,11 +56,7 @@ namespace LoginAndReg.Controllers
                         Password = user.Password
                     };
 
-                    Console.WriteLine(user.FirstName);
-                    Console.WriteLine(user.LastName);
-                    Console.WriteLine(user.Email);
-                    Console.WriteLine(user.Password);
-
+                    
                     _context.Add(newUser);
                     _context.SaveChanges();
 
