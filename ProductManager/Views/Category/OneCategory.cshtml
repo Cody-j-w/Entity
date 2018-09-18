@@ -1,0 +1,38 @@
+@model ViewModel
+
+<h1 class="text-info display-3 text-center">@Model.category.name</h1>
+
+<hr class="bg-light my-5">
+
+
+<div class="col-3 d-inline-block align-top">
+<table class="table table-light table-striped table-bordered text-primary">
+    <thead>
+        <tr>
+            <th>Products in this category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(@Model.products != null)
+        {
+        @foreach(var product in @Model.products)
+        {
+            <tr>
+                <td>@product.name</td>
+            </tr>
+        }
+        }
+    </tbody>
+</table>
+</div>
+
+<form class="col-6 d-inline-block" asp-action="AddProduct" asp-controller="Category" method="POST">
+    <select class="form-control d-inline-block col-6" name="productid">
+        @foreach(var product in @Model.UnusedProducts)
+        {
+            <option class="form-control" value="@product.ProductId">@product.name</option>
+        }
+    </select>
+    <input type="hidden" name="categoryid" value="@Model.category.CategoryId">
+    <input type="submit" class="btn btn-info d-inline-block" value="Add!">
+</form>

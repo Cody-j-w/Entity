@@ -1,0 +1,17 @@
+@model Product
+
+<form asp-action="Create" asp-controller="Product" method="POST">
+    <p class="text-info lead">Product name</p>
+    <input type="text" asp-for="name" class="form-control col-4">
+    <span asp-validation-for="name" class="text-danger"></span>
+    <hr class="bg-info my-3">
+    <p class="text-info lead">Product description</p>
+    <input type="text" asp-for="description" class="form-control col-8">
+    <span asp-validation-for="description" class="text-danger"></span>
+    <hr class="bg-info my-3">
+    <p class="text-info lead">Product price</p>
+    <input type="text" asp-for="price" class="form-control col-4">
+    <span asp-validation-for="price" class="text-danger"></span>
+    <hr class="bg-info my-3">
+    <input type="submit" value="Submit" class="btn btn-info text-dark">
+</form>

@@ -1,0 +1,9 @@
+@model Category
+<h1 class="text-info display-2 text-center">Add a new category!</h1>
+
+<form asp-action="Create" asp-controller="Category" method="POST">
+    <hr class="bg-light my-3">
+    <p class="text-info lead">New category:</p> <input type="text" class="form-control col-4" asp-for="name">
+    <hr class="bg-light my-3"> 
+    <input type="submit" class="btn btn-info btn-lg col-3" value="Add!">
+</form>

@@ -1,0 +1,20 @@
+@model CatchAll
+
+<h1 class="text-info display-3">Products</h1>
+<ul>
+@foreach(var product in @Model.AllProducts)
+{
+<a href="products/@product.ProductId"><li class="text-info lead">@product.name</li></a>
+}
+
+</ul>
+<a asp-action="New" asp-controller="Product" class="btn btn-info text-dark btn-lg">Add new product</a>
+<hr class="bg-light my-4">
+<h1 class="text-info display-3">Categories</h1>
+<ul>
+    @foreach(var category in @Model.AllCategories)
+    {
+        <a href="categories/@category.CategoryId"><li class="text-info lead">@category.name</li></a>
+    }
+</ul>
+<a asp-action="New" asp-controller="Category" class="btn btn-info text-dark btn-lg">Add new category</a>

@@ -1,0 +1,11 @@
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\bin\Debug\netcoreapp2.0\ProductManager.deps.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\bin\Debug\netcoreapp2.0\ProductManager.runtimeconfig.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\bin\Debug\netcoreapp2.0\ProductManager.runtimeconfig.dev.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\bin\Debug\netcoreapp2.0\ProductManager.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\bin\Debug\netcoreapp2.0\ProductManager.pdb
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.csprojResolveAssemblyReference.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.csproj.CoreCompileInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.AssemblyInfoInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.AssemblyInfo.cs
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\ProductManager\obj\Debug\netcoreapp2.0\ProductManager.pdb
