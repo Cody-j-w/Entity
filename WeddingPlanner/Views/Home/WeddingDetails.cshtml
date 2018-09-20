@@ -1,0 +1,23 @@
+<div class="row">
+<h1 class="text-info display-4 text-center d-inline-block">@Model.Wedding.wedderOne and @Model.Wedding.wedderTwo's Wedding</h1>
+<div class="col-2 d-inline-block"></div>
+<a href="Logout" class="btn btn-outline-light d-inline-block align-self-end">Log out</a>
+<a href="Dashboard" class="btn btn-outline-light d-inline-block align-self-end">Back to Dashboard</a>
+</div>
+<div class="row">
+    <h1 class="text-light">Date: @Model.Wedding.weddingDay.ToString("MMMM d, yyyy")</h1>
+</div>
+
+<hr class="my-3 bg-light">
+<div class="row">
+    <div class="col-5">
+
+        <h1 class="text-info">Guests:</h1>
+        <ul>
+        @foreach(var guest in @Model.Wedding.guests)
+        {
+            <li class="text-light">@guest.User.firstName @guest.User.lastName</li>
+        }
+        </ul>
+    </div>
+</div>

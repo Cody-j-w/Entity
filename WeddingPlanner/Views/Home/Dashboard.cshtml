@@ -1,0 +1,71 @@
+﻿@model ViewModel
+<div class="row">
+    <h1 class="text-info display-4 d-inline-block">Welcome to the Wedding Planner</h1>
+    <div class=" col-2 d-inline-block"></div>
+    <a href="Logout" class="btn btn-outline-light d-inline-block align-items-center">Log out</a>
+</div>
+<hr class="my-3 bg-light">
+<table class="table table-light table-striped table-bordered text-info">
+    <thead>
+        <tr>
+            <th>
+                Wedding
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Guests
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(@Model.Weddings != null)
+        {
+            @foreach(var wedding in @Model.Weddings)
+            {
+                <tr>
+                    <td><a href="wedding/@wedding.WeddingId">@wedding.wedderOne & @wedding.wedderTwo</a></td>
+                    <td>@wedding.weddingDay.ToString("MMM dd, yyyy")</td>
+                    <td>@wedding.guests.Count()</td>
+                    <td>@if(@wedding.UserId == @Model.PersonalId)
+                        {
+                            <a href="weddings/delete" class="btn btn-outline-danger">Delete</a>
+                        }
+                        else
+                        {
+                            int Marker = 0;
+                            @foreach(var guest in wedding.guests)
+                            {
+                                
+                                @if(guest.UserId == @Model.PersonalId)
+                                {
+                                    Marker++;
+                                    <form action="weddings/cancel" method="POST">
+                                        <input type="hidden" name="weddingId" value="@wedding.WeddingId">
+                                        <input type="submit" class="btn btn-outline-warning" value="Un-RSVP">
+                                    </form>
+                                }
+                                
+                            }
+                            @if(Marker == 0)
+                                {
+                                <form action="weddings/RSVP"  method="POST">
+                                    <input type="hidden" name="RSVPer" value="@Model.PersonalId">
+                                    <input type="hidden" name="RSVPed" value="@wedding.WeddingId">
+                                    <input type="submit" class="btn btn-outline-success" value="RSVP">
+                                </form>
+                                }
+
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<hr class="my-3 bg-light">
+<a asp-action="NewWedding" class="btn btn-outline-info">Add a new wedding!</a>

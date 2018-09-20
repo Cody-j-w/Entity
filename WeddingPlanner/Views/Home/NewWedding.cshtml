@@ -1,0 +1,20 @@
+﻿@model Wedding
+<div class="row">
+<h1 class="text-info display-4 text-center d-inline-block">Plan a new wedding!</h1>
+<div class="d-inline-block col-3"></div>
+<a href="Logout" class="btn btn-outline-light d-inline-block align-self-end">Log out</a>
+<div class="d-inline-block"></div>
+<a href="Dashboard" class="btn btn-outline-light d-inline-block align-self-end">Back to Dashboard</a>
+</div>
+
+<form asp-action="CreateWedding" class="col-4" asp-controller="Home" method="POST">
+    <span class="text-info lead">Wedder One:</span> <input class="form-control" type="text" asp-for="wedderOne">
+    <hr class="my-3 bg-light">
+    <span class="text-info lead">Wedder Two</span> <input class="form-control" type="text" asp-for="wedderTwo">
+    <hr class="my-3 bg-light">
+    <span class="text-info lead">Date</span> <input type="date" class="form-control" asp-for="weddingDay">
+    <hr class="my-3 bg-light">
+    <span class="text-info lead">Address</span> <input type="text" class="form-control" asp-for="address">
+    <hr class="my-3 bg-light">
+    <input type="submit" class="btn btn-outline-info btn-lg w-100" value="Submit!">
+</form>

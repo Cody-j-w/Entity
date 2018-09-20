@@ -43,7 +43,9 @@ namespace ProductManager.Controllers
                 _context.Categories.Add(NewCategory);
                 _context.SaveChanges();
 
-                return RedirectToAction("OneCategory", new{id = category.CategoryId});
+                Category RouteId = _context.Categories.SingleOrDefault(c => c.name == category.name);
+
+                return RedirectToAction("OneCategory", new{id = RouteId.CategoryId});
             }
             else
             {
@@ -86,12 +88,13 @@ namespace ProductManager.Controllers
             ViewModel ViewModel = new ViewModel();
             List<Product> Unused = new List<Product>();
             List<Product> Used = new List<Product>();
-            int Marker = 0;
+            int Marker;
 
             IEnumerable<Product> AllProducts = _context.Products;
 
             foreach(var product in AllProducts)
             {
+                Marker = 0;
                 foreach(var category in product.categories)
                 {
                     if(category.CategoryId == id)
