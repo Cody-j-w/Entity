@@ -1,0 +1,62 @@
+﻿@model ViewModel
+
+<div class="row card-light">
+    <h1 class="text-info ">Welcome, @Model.User.firstName!</h1>
+</div>
+
+<hr class="bg-light my-4">
+<form asp-action="Submit" asp-controller="Home" method="POST">
+    <textarea name="post" class="form-control"></textarea>
+    <input type="submit" class="btn btn-outline-info" value="Post message">
+</form>
+@if(TempData["MessageError"] != null)
+{
+    <p class="text-danger lead">@TempData["MessageError"]</p>
+}
+<div class="col-8">
+
+@if(@Model.Messages != null)
+{
+    @foreach(var message in @Model.Messages)
+    {
+    <div class="card-body bg-light text-dark">
+        <h5 class="card-title">@message.User.firstName @message.User.lastName</h5>
+        <h6 class="card-subtitle text-secondary">@message.createdAt.ToString("MMMM d, yyyy")</h6>
+        <hr class="bg-info my-2">
+        <p class="card-text">@message.message</p>
+        @if(message.comments != null)
+        {
+            <hr class="bg-info my-2">
+            <div class="col-3"></div>
+            <table class="table table-dark table-striped table-bordered col-8">
+            @foreach(var comment in message.comments)
+            {
+                <tr>
+                    <td><div class="card-body bg-secondary">
+                        <h6 class="text-light card-subtitle">@comment.User.firstName on @comment.createdAt.ToString("MMM d, yyyy")</h6>
+                        <hr class="bg-info my-2">
+                        <p class="card-text text-light">@comment.comment</p>
+                    </div></td>
+                </tr>
+            }
+            <tr>@if(TempData["CommentError"] != null && (int)TempData["ErrorId"] == message.MessageId)
+                {
+                    <p class="text-danger lead">@TempData["CommentError"]</p>
+                }
+            </tr>
+            <tr>
+                <td>
+                    <form asp-action="Comment" asp-controller="Home" method="POST">
+                        <textarea class="form-control" name="post"></textarea>
+                        <input type="hidden" value="@message.MessageId" name="messageid">
+                        <input type="submit" class="btn btn-outline-success" value="Post comment">
+                    </form>
+                </td>
+            </tr>
+            </table>
+        }
+    </div>
+    <hr class="bg-light my-3">
+    }
+}
+</div>

@@ -1,0 +1,11 @@
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\bin\Debug\netcoreapp2.0\thewall.deps.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\bin\Debug\netcoreapp2.0\thewall.runtimeconfig.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\bin\Debug\netcoreapp2.0\thewall.runtimeconfig.dev.json
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\bin\Debug\netcoreapp2.0\thewall.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\bin\Debug\netcoreapp2.0\thewall.pdb
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.csprojResolveAssemblyReference.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.csproj.CoreCompileInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.AssemblyInfoInputs.cache
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.AssemblyInfo.cs
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.dll
+C:\Users\Cody James\Documents\C#\Entity_ORM\thewall\obj\Debug\netcoreapp2.0\thewall.pdb
